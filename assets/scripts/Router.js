@@ -71,11 +71,11 @@ export class Router {
       return;
     }
     else {
-      let hash = '';
-      if (page != 'home') {
+      let hash = window.location.origin+window.location.pathname;
+      if (page !== 'home') {
         hash = '#' + page;
       }
-      if (!statePopped && window.location.hash != hash) {
+      if (!statePopped && window.location.hash !== hash) {
         history.pushState(page,'',hash);
       }
       this[page].call();
