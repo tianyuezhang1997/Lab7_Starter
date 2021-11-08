@@ -5,7 +5,7 @@ const CACHE_NAME = 'lab-7-starter';
 
 const urlsToCache = [
   
-  '/',
+  './',
   'assets/components/RecipeCard.js',
   'assets/components/RecipeExpand.js',
   'assets/images\\icons/0-star.svg',
