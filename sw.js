@@ -3,7 +3,24 @@
 
 const CACHE_NAME = 'lab-7-starter';
 
-const recipes = [
+const urlsToCache = [
+  
+  '/assets/components/RecipeCard.js',
+  '/assets/components/RecipeExpand.js',
+  '/assets/images\\icons/0-star.svg',
+  '/assets/images\\icons/1-star.svg',
+  '/assets/images\\icons/2-star.svg',
+  '/assets/images\\icons/3-star.svg',
+  '/assets/images\\icons/4-star.svg',
+  '/assets/images\\icons/5-star.svg',
+  '/assets/images\\icons/arrow-down.png',
+  '/assets/scripts/main.js',
+  '/assets/scripts/Router.js',
+  '/assets/styles/main.css',
+  '/index.html',
+  '/favicon.ico',
+  '/sw.js',
+  
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
   'https://introweb.tech/assets/json/chocolateChip.json',
@@ -23,7 +40,7 @@ self.addEventListener('install', function (event) {
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
-        return cache.addAll(recipes);
+        return cache.addAll(urlsToCache);
       })
   );
 });
